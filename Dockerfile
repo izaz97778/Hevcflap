@@ -1,10 +1,17 @@
-FROM python:3.11-slim
+# Use a lightweight Python image
+FROM python:3.10-slim
 
+# Set working directory
 WORKDIR /app
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy all project files
+COPY . /app
 
-COPY . .
+# Upgrade pip and install Python dependencies
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
+# Expose port for FastAPI (Uvicorn default is 8000, but we'll use 8080 for Koyeb)
+EXPOSE 8080
+
+# Start the FastAPI app using uvicorn
 CMD ["bash", "start.sh"]
