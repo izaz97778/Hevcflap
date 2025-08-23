@@ -20,7 +20,7 @@ SESSIONS = [
     os.getenv("SESSION3")
 ]
 
-target_username = os.getenv("TARGET_USERNAME", "@HEVCFapFilesbot")
+target_username = os.getenv("TARGET_USERNAME", "")
 
 # Mongo
 MONGO_URI = os.getenv("MONGO_URI")
