@@ -25,20 +25,13 @@ This is a FastAPI-based Telegram bot that uses multiple Telegram sessions to bat
 You must set the following environment variables:
 
 ```env
-# Telegram API credentials
-API_ID=your_telegram_api_id
-API_HASH=your_telegram_api_hash
-
-# Telegram target username (user, channel, or bot)
-TARGET_USERNAME=@targetusername
-
-# Session strings (generate with Telethon)
-SESSION1=session_string_1
-SESSION2=session_string_2
-SESSION3=session_string_3
-
-# MongoDB URI for saving progress
-MONGO_URI=mongodb+srv://user:pass@cluster.mongodb.net
+API_ID=
+API_HASH=
+TARGET_USERNAME=
+SESSION1=
+SESSION2=
+SESSION3=
+MONGO_URI=
 
 
 ---
